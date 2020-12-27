@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+
+{% block content %}
+{% if post.published_date %}
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">{{ post.title }}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{ post.published_date }}</h5>
+    <p class="card-text">{{ post.text|linebreaksbr }}</p>
+  </div>
+</div>
+
+
+    {% endif %}
+{% endblock %}
+
